@@ -49,12 +49,12 @@ class WebcamCapture extends React.Component {
    //     alert("Data: " + data + "\nStatus: " + status);
   //    });
 
-    $.getJSON("demo_test.asp", {
-        wordlist: JSON.stringify(this.pictures)
-    }, function(data, status){
-        console.log(data.result)
-         alert("Data: " + data + "\nStatus: " + status);
-      });
+    // $.getJSON("demo_test.asp", {
+    //     wordlist: JSON.stringify(this.pictures)
+    // }, function(data, status){
+    //     console.log(data.result)
+    //      alert("Data: " + data + "\nStatus: " + status);
+    //   });
   }
 
   cap() {
@@ -83,10 +83,10 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">Welcome to Ava</h1>
+          <h1 className="App-title">Welcome to Alice.</h1>
         </header>
         <p className="App-intro">
-          Before we let you access your account, we need to verify your identity. Please sit in front of your webcam.
+          Before we let you access your account, let us verify your identity by seeing who you are.
         </p>
         <WebcamCapture/> 
       </div>
