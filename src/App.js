@@ -1,3 +1,5 @@
+ /*eslint-env jquery*/
+
 import React, { Component } from 'react';
 import './App.css';
 // import $ from 'jquery';
@@ -12,6 +14,7 @@ class WebcamCapture extends React.Component {
     this.count = 0;
     this.pictures = [];
     this.cap = this.cap.bind(this);
+    this.sendPics = this.sendPics.bind(this); 
     this.capture = this.capture.bind(this);
   }
 
@@ -35,12 +38,23 @@ class WebcamCapture extends React.Component {
     if (this.count == 10) {
       clearInterval(this.nIntervalId); 
       this.count = 0;
-   //  $.post("demo_test.asp", this.pictures, function(data, status){ // $ is a jquery object
-   //     alert("Data: " + data + "\nStatus: " + status);
-  //    });
+      this.sendPics();
       this.pictures = [];
     }  
 
+  }
+
+  sendPics() {
+//  $.post("demo_test.asp", this.pictures, function(data, status){ // $ is a jquery object
+   //     alert("Data: " + data + "\nStatus: " + status);
+  //    });
+
+    $.getJSON("demo_test.asp", {
+        wordlist: JSON.stringify(this.pictures)
+    }, function(data, status){
+        console.log(data.result)
+         alert("Data: " + data + "\nStatus: " + status);
+      });
   }
 
   cap() {
