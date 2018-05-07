@@ -35,4 +35,6 @@ html -
 css -
 sass -
 nuance-mix -
-bluemix -
+bluemix 
+
+<center><a href="http://tinypic.com?ref=34ozwd5" target="_blank"><img src="http://i68.tinypic.com/34ozwd5.jpg" border="0" alt="Image and video hosting by TinyPic"></a>
